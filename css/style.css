@@ -1,0 +1,173 @@
+:root {
+    --main-pink:#f05f75;
+    --title-black:#414141;
+    --title-blue:#a2adb5;
+    --border-col:#dfdee3;
+    --p-col:#969696;
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        text-transform: capitalize;
+    }
+
+    .container {
+        width: 100%;
+        height: 100lvh;
+        background-color: #ffffff;
+        padding: 50px 80px;
+    }
+
+    .container h1 {
+        text-align: center;
+        font-family: sans-serif;
+        font-size: 1em;
+        font-weight: normal;
+        color: var(--title-black);
+        letter-spacing: 5px;
+    }
+
+    .container p,
+    .container i {
+        text-align: center;
+        color: var(--title-blue);
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .container p {
+        font-size: 12px;
+    }
+
+    .container .parent {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        text-align: center;
+        align-items: center;
+    }
+
+    .container .parent .image {
+        width: 150px;
+        height: 150px;
+        padding: 5px;
+        border: 1px solid var(--border-col);
+        border-radius: 50%;
+        margin: 20px auto;
+
+    }
+
+    .container .parent .box:nth-child(1) img,
+    .container .parent .box:nth-child(3) img  {
+        border-radius: 50%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    
+    .container .parent .box:nth-child(1) h2,
+    .container .parent .box:nth-child(3) h2 {
+        color: var(--main-pink);
+        font-weight: normal;
+        font-size: 2em;
+    }
+
+    
+    
+    .container .parent .box:nth-child(1) span,
+    .container .parent .box:nth-child(3) span {
+        font-size: 10px;
+        color: var(--title-blue);
+        margin: 20px;
+        display: block;
+        position: relative;
+    }
+
+        
+    .container .parent .box:nth-child(1) span::before,
+    .container .parent .box:nth-child(3) span::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 40%;
+        background-color: var(--p-col);
+        height: 1px;
+        z-index: 4444;
+    }
+        
+    .container .parent .box:nth-child(1) span::after,
+    .container .parent .box:nth-child(3) span::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 40%;
+        background-color: var(--p-col);
+        height: 1px;
+        z-index: 4444;
+    }
+
+    .container .parent .box:nth-child(1) .icones,
+    .container .parent .box:nth-child(3) .icones {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .container .parent .box:nth-child(1) .icones i,
+    .container .parent .box:nth-child(3) .icones i {
+        color: var(--p-col);
+        font-size: 14px;
+    }
+
+    .container .parent .box:nth-child(2) .top, 
+    .container .parent .box:nth-child(2) .bot {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .container .parent .box:nth-child(2) > span {
+        font-size: 10px;
+        display: block;
+        color: var(--p-col);
+        margin: 10px;
+    } 
+
+    .container .parent .box:nth-child(2) .top > div , 
+    .container .parent .box:nth-child(2) .bot > div {
+        border: 1px solid var(--p-col);
+        width: 100px;
+        height: 110px;
+        display: grid;
+        place-items: center;
+    }
+
+    .container .parent .box:nth-child(2) .top > div span, 
+    .container .parent .box:nth-child(2) .bot > div  span{
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .container .parent .box:nth-child(2) .top > div span:nth-child(1), 
+    .container .parent .box:nth-child(2) .bot > div  span:nth-child(1) {
+        font-size: 2em;
+        display: block;
+        font-weight: bold;
+        color: var(--main-pink);
+    }
+
+    .container .parent .box:nth-child(2) .top > div span:nth-child(2), 
+    .container .parent .box:nth-child(2) .bot > div  span:nth-child(2) {
+        border-top: 1px solid var(--p-col);
+        font-size: 10px;
+        padding-top: 5px;
+        color: var(--p-col);
+        font-family: sans-serif;
+    }
